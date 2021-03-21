@@ -23,13 +23,13 @@ func cgImageFromRawBitmap(_ bitMapData: UnsafeRawPointer,
                                colorSpaceName: colorSpace,
                                bytesPerRow: width*bytesPerPixel,
                                bitsPerPixel: bitsPerComponent*bytesPerPixel)
-    memcpy(bir?.bitmapData,
-           bitMapData,
-           width*height*bytesPerPixel)
     guard let bmImageRep = bir
     else {
         return nil
     }
+    memcpy(bmImageRep.bitmapData,
+           bitMapData,
+           width*height*bytesPerPixel)
     return bmImageRep.cgImage
 }
 
