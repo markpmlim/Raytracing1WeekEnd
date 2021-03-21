@@ -6,6 +6,8 @@ The primary data type Double and its vector type double3 will be used in this se
 
 Functions like normalize, refract, reflect, length_squared, etc are available in Swift and these operates in SIMD mode.
 
+The set begins with Raytracing2a.playground and ends with RayTracingCover.playground. To help the reader, an image number is listed on the main page of each playground
+
 With the exception of the first 2 playgrounds, the CGImage object created by the function generateCGImage() can be viewed by clicking on the "Show Result" or the "QuickLook" button. The method generateCGImage() is the main function in all the playgrounds and is declared with the keyword "public" so it can be called from the main program.
 
 
