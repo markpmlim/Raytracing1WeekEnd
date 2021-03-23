@@ -75,7 +75,7 @@ public func generateCGImage() -> CGImage? {
 
     // World
 
-    let R = cos(π/4)
+    let R = cos(Double.pi/4)
     var objects = [Hittable]()
 
     let materialLeft = Lambertian(albedo: color(0.0, 0.0, 1.0))
