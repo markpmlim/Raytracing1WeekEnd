@@ -58,23 +58,19 @@ func random_in_hemisphere(normal: vec3) -> vec3 {
 }
 
 
-// Listing 53 - not used
+// Listing 53 - used once only
 func refract(_ uv: vec3, _ n: vec3, _ etai_over_etat: Double) -> vec3 {
     let cos_theta = fmin(dot(-uv, n), 1.0)
     let r_out_perp =  etai_over_etat * (uv + cos_theta*n);
-    let r_out_parallel = -sqrt(fabs(1.0 - r_out_perp.length_squared())) * n;
+    let r_out_parallel = -sqrt(fabs(1.0 - length_squared(r_out_perp))) * n;
     return r_out_perp + r_out_parallel;
 }
-/**/
+
 
 extension double3 {
     func near_zero() -> Bool {
         // Return true if the vector is close to zero in all dimensions.
         let s = 1e-8
         return (fabs(x) < s) && (fabs(y) < s) && (fabs(z) < s)
-    }
-
-    func length_squared() -> Double {
-        return dot(self, self)
     }
 }
