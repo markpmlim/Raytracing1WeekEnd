@@ -5,10 +5,9 @@ typealias color = double3
 typealias vec3 = double3
 typealias point3 = double3
 
-let π = 3.1415926535897932385
 
 func degrees_to_radians(_ degrees: Double) -> Double {
-    return degrees * π / 180.0
+    return degrees * Double.pi / 180.0
 }
 // Listing 25
 // arc4random() returns a UInt32
